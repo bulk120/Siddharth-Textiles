@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddharth Textiles | Premium Saree Manufacturer Since 1995</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #8b4513;
+            --accent-color: #c19a6b;
+            --light-color: #f8f5f2;
+            --medium-color: #e8e2d9;
+            --text-dark: #2c2c2c;
+            --text-light: #666666;
+            --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+            --border-radius: 4px;
+            --container-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--primary-color);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-spacing {
+            padding: 100px 0;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 22px;
+        }
+
+        .logo-text h1 {
+            font-size: 24px;
+            margin-bottom: 2px;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text p {
+            font-size: 12px;
+            color: var(--text-light);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: 0.3px;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 0;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        nav a.active {
+            color: var(--secondary-color);
+        }
+
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--primary-color);
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.9)), 
+                        url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 180px 0 120px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h2 {
+            font-size: 64px;
+            color: white;
+            margin-bottom: 24px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            color: white;
+            padding: 16px 36px;
+            border: 2px solid var(--accent-color);
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: var(--accent-color);
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            width: 100%;
+        }
+
+        .btn:hover {
+            border-color: var(--accent-color);
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .btn-primary::before {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-primary:hover {
+            border-color: var(--secondary-color);
+        }
+
+        /* Section Common */
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            margin-bottom: 16px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 2px;
+            background-color: var(--accent-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-img-container {
+            position: relative;
+        }
+
+        .about-img {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .about-img:hover img {
+            transform: scale(1.03);
+        }
+
+        .years-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background-color: var(--secondary-color);
+            color: white;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+        }
+
+        .years-badge span:first-child {
+            font-size: 36px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            line-height: 1;
+        }
+
+        .years-badge span:last-child {
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        .about-content h3 {
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+
+        .about-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .about-features {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .feature-icon {
+            width: 24px;
+            height: 24px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .feature-text h4 {
+            font-size: 18px;
+            margin-bottom: 4px;
+        }
+
+        .feature-text p {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--light-color);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .contact-card {
+            background-color: white;
+            padding: 32px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .contact-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--light-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary-color);
+            font-size: 20px;
+        }
+
+        .contact-header h3 {
+            font-size: 22px;
+            margin-bottom: 0;
+        }
+
+        .contact-details p {
+            color: var(--text-light);
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .contact-form-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-form-container h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid var(--medium-color);
+            border-radius: var(--border-radius);
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            transition: var(--transition);
+            background-color: #fff;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(193, 154, 107, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo h3 {
+            color: white;
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+
+        .footer-logo p {
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 300px;
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h4, .footer-contact h4 {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 24px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .footer-links h4::after, .footer-contact h4::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent-color);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 15px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 15px;
+        }
+
+        .footer-contact i {
+            color: var(--accent-color);
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+        }
+
+        /* Page Header */
+        .page-header {
+            background-color: var(--light-color);
+            padding: 140px 0 60px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .page-header p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Privacy Policy */
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .privacy-section {
+            margin-bottom: 40px;
+        }
+
+        .privacy-section h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--medium-color);
+        }
+
+        .privacy-section p {
+            color: var(--text-light);
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .privacy-section ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .privacy-section li {
+            color: var(--text-light);
+            margin-bottom: 10px;
+            padding-left: 24px;
+            position: relative;
+            font-size: 16px;
+        }
+
+        .privacy-section li::before {
+            content: '•';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+
+        /* Page Content */
+        .page-content {
+            padding: 80px 0;
+        }
+
+        /* About Page */
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .mission-card, .vision-card {
+            background-color: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+
+        .mission-card::before, .vision-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        .mission-card h3, .vision-card h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .mission-card h3 i, .vision-card h3 i {
+            color: var(--accent-color);
+        }
+
+        .timeline {
+            margin-top: 80px;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--medium-color);
+        }
+
+        .timeline-year {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--secondary-color);
+        }
+
+        .timeline-content h4 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        /* Contact Page Map */
+        .map-container {
+            margin-top: 60px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            height: 400px;
+            background-color: var(--light-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .map-placeholder {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .map-placeholder i {
+            font-size: 64px;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .map-placeholder h4 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-grid, .contact-container, .mission-vision {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            
+            .hero h2 {
+                font-size: 48px;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+            }
+            
+            .timeline-item {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: var(--shadow-md);
+                padding: 20px 0;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+                padding: 0 24px;
+            }
+            
+            nav li {
+                width: 100%;
+                border-bottom: 1px solid var(--medium-color);
+            }
+            
+            nav a {
+                display: block;
+                padding: 16px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 140px 0 80px;
+                background-attachment: scroll;
+            }
+            
+            .hero h2 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .section-header h2 {
+                font-size: 36px;
+            }
+            
+            .section-spacing, .page-content {
+                padding: 80px 0;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .mission-card, .vision-card {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .hero h2 {
+                font-size: 32px;
+            }
+            
+            .section-header h2 {
+                font-size: 28px;
+            }
+            
+            .years-badge {
+                width: 100px;
+                height: 100px;
+                right: -10px;
+            }
+            
+            .years-badge span:first-child {
+                font-size: 28px;
+            }
+            
+            .page-header h1 {
+                font-size: 36px;
+            }
+            
+            .page-header {
+                padding: 120px 0 40px;
+            }
+        }
+
+        /* Page Content Visibility */
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#home" class="logo" data-page="home">
+                <div class="logo-icon">
+                    <i class="fas fa-vest"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>Siddharth Textiles</h1>
+                    <p>Saree Manufacturer Since 1995</p>
+                </div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="#about" class="nav-link" data-page="about">About</a></li>
+                    <li><a href="#contact" class="nav-link" data-page="contact">Contact</a></li>
+                    <li><a href="#privacy" class="nav-link" data-page="privacy">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home-page" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Precision Craftsmanship in Every Thread</h2>
+                    <p>For over two decades, Siddharth Textiles has been at the forefront of saree manufacturing, combining traditional artistry with contemporary excellence. Each piece reflects our unwavering commitment to quality and detail.</p>
+                    <a href="#contact" class="btn btn-primary nav-link" data-page="contact">Request Catalogue</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Preview Section -->
+        <section class="section-spacing">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Heritage</h2>
+                    <p>Three decades of textile excellence, rooted in Surat's rich weaving tradition</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-img-container">
+                        <div class="about-img">
+                            <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Siddharth Textiles Manufacturing Facility">
+                        </div>
+                        <div class="years-badge">
+                            <span>28+</span>
+                            <span>Years</span>
+                        </div>
+                    </div>
+                    <div class="about-content">
+                        <h3>Excellence in Textile Manufacturing</h3>
+                        <p>Founded in 1995, Siddharth Textiles has established itself as a benchmark for quality in saree manufacturing. Our journey began with a vision to preserve traditional craftsmanship while embracing modern techniques.</p>
+                        <p>Located in the heart of Surat's textile market, we specialize in premium sarees crafted from silk, cotton, georgette, and chiffon. Our designs honor heritage while meeting contemporary aesthetic standards.</p>
+                        
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Quality Assurance</h4>
+                                    <p>Rigorous quality checks at every production stage</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Expert Artisans</h4>
+                                    <p>Skilled craftsmen with decades of experience</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="#about" class="btn nav-link" style="margin-top: 30px;" data-page="about">Learn More About Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Preview Section -->
+        <section class="contact-section section-spacing">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Contact Our Team</h2>
+                    <p>Connect with us for inquiries, collaborations, or to visit our showroom</p>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-header">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h3>Showroom Address</h3>
+                                </div>
+                            </div>
+                            <div class="contact-details">
+                                <p>M-1279/1280/1281, Ground Floor</p>
+                                <p>Surat Textile Market, Ring Road</p>
+                                <p>Surat, Gujarat 395002</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-header">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h3>Contact Numbers</h3>
+                                </div>
+                            </div>
+                            <div class="contact-details">
+                                <p><strong>Primary:</strong> +91 96012 88111</p>
+                                <p><strong>Business Hours:</strong> Mon-Sat, 10AM-8PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <h3>Quick Inquiry</h3>
+                        <form id="homeContactForm">
+                            <div class="form-group">
+                                <label for="homeName">Full Name *</label>
+                                <input type="text" id="homeName" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="homeEmail">Email Address *</label>
+                                    <input type="email" id="homeEmail" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="homePhone">Phone Number *</label>
+                                    <input type="tel" id="homePhone" class="form-control" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="homeMessage">Brief Message *</label>
+                                <textarea id="homeMessage" class="form-control" rows="4" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Quick Inquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about-page" class="page">
+        <section class="page-header">
+            <div class="container">
+                <h1>About Siddharth Textiles</h1>
+                <p>Established in 1995, we are a premier saree manufacturer with a legacy of craftsmanship and innovation</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-img-container">
+                        <div class="about-img">
+                            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Textile Manufacturing Process">
+                        </div>
+                        <div class="years-badge">
+                            <span>1995</span>
+                            <span>Established</span>
+                        </div>
+                    </div>
+                    
+                    <div class="about-content">
+                        <h3>Our Journey of Excellence</h3>
+                        <p>Siddharth Textiles was founded with a simple yet powerful vision: to create sarees that embody the rich textile heritage of India while meeting the evolving tastes of contemporary fashion. What began as a small workshop in Surat has grown into a respected name in the textile industry.</p>
+                        <p>Our name, Siddharth, meaning "one who has accomplished a goal," reflects our commitment to achieving excellence in every aspect of our work. From fabric selection to final stitching, each step in our manufacturing process is executed with precision and care.</p>
+                        
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-tshirt"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Premium Fabrics</h4>
+                                    <p>Silk, cotton, georgette, chiffon, and more</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Design Diversity</h4>
+                                    <p>Traditional to contemporary patterns</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-industry"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Modern Facility</h4>
+                                    <p>State-of-the-art manufacturing unit</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-shipping-fast"></i>
+                                </div>
+                                <div class="feature-text">
+                                    <h4>Nationwide Reach</h4>
+                                    <p>Distribution across India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mission-vision">
+                    <div class="mission-card">
+                        <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                        <p>To preserve and promote India's rich textile heritage through innovative designs and uncompromising quality. We strive to create sarees that not only adorn but also tell stories of craftsmanship, tradition, and artistry.</p>
+                        <p>We are committed to sustainable practices and ethical manufacturing processes that respect both our artisans and the environment.</p>
+                    </div>
+                    
+                    <div class="vision-card">
+                        <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                        <p>To become the most trusted name in saree manufacturing globally, recognized for our commitment to quality, innovation, and customer satisfaction. We aim to bridge traditional craftsmanship with contemporary fashion sensibilities.</p>
+                        <p>We envision a future where every Siddharth Textiles saree is cherished as a work of art that transcends generations.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline">
+                    <div class="section-header">
+                        <h2>Our Timeline</h2>
+                        <p>Key milestones in our journey of growth and excellence</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">1995</div>
+                        <div class="timeline-content">
+                            <h4>Foundation Established</h4>
+                            <p>Siddharth Textiles was founded in Surat with a small workshop and a vision to create high-quality traditional sarees.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2002</div>
+                        <div class="timeline-content">
+                            <h4>Expansion of Facilities</h4>
+                            <p>Moved to our current location in Surat Textile Market, expanding our manufacturing capacity and showroom space.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2010</div>
+                        <div class="timeline-content">
+                            <h4>National Recognition</h4>
+                            <p>Received recognition as a leading saree manufacturer with distribution channels established across major Indian cities.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2018</div>
+                        <div class="timeline-content">
+                            <h4>Modernization Initiative</h4>
+                            <p>Invested in state-of-the-art manufacturing equipment while preserving traditional handwork techniques.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-content">
+                            <h4>Digital Transformation</h4>
+                            <p>Launched comprehensive digital presence and e-catalogue system to better serve our nationwide clientele.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact-page" class="page">
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Get in touch with our team for inquiries, collaborations, or to schedule a visit to our showroom</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-header">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h3>Showroom & Office</h3>
+                                </div>
+                            </div>
+                            <div class="contact-details">
+                                <p><strong>Address:</strong> M-1279/1280/1281, Ground Floor</p>
+                                <p>Surat Textile Market, Ring Road</p>
+                                <p>Surat, Gujarat 395002</p>
+                                <p><strong>Landmark:</strong> Opposite City Center, Ring Road</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-header">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h3>Contact Numbers</h3>
+                                </div>
+                            </div>
+                            <div class="contact-details">
+                                <p><strong>Primary:</strong> +91 96012 88111</p>
+                                <p><strong>WhatsApp:</strong> +91 96012 88111</p>
+                                <p><strong>Wholesale Inquiries:</strong> +91 98251 11223</p>
+                                <p><strong>Business Hours:</strong> Monday to Saturday, 10:00 AM - 8:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-header">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h3>Email Addresses</h3>
+                                </div>
+                            </div>
+                            <div class="contact-details">
+                                <p><strong>General Inquiries:</strong> SIDDHARTHTEXTILESSURAT@gmail.com</p>
+                                <p><strong>Sales & Orders:</strong> sales@siddharthtextiles.com</p>
+                                <p><strong>Business Partnerships:</strong> partnerships@siddharthtextiles.com</p>
+                                <p><strong>Response Time:</strong> Within 24 hours on business days</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <h3>Send Detailed Inquiry</h3>
+                        <form id="contactPageForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactName">Full Name *</label>
+                                    <input type="text" id="contactName" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactCompany">Company Name</label>
+                                    <input type="text" id="contactCompany" class="form-control">
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactEmail">Email Address *</label>
+                                    <input type="email" id="contactEmail" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactPhone">Phone Number *</label>
+                                    <input type="tel" id="contactPhone" class="form-control" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactSubject">Subject *</label>
+                                <input type="text" id="contactSubject" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="inquiryType">Type of Inquiry *</label>
+                                <select id="inquiryType" class="form-control" required>
+                                    <option value="">Select an option</option>
+                                    <option value="wholesale">Wholesale/Bulk Order</option>
+                                    <option value="catalogue">Request Catalogue</option>
+                                    <option value="partnership">Business Partnership</option>
+                                    <option value="price">Price Inquiry</option>
+                                    <option value="visit">Schedule Showroom Visit</option>
+                                    <option value="other">Other Inquiry</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactMessage">Detailed Message *</label>
+                                <textarea id="contactMessage" class="form-control" rows="6" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4>Location Map</h4>
+                        <p>Siddharth Textiles is located in Surat Textile Market on Ring Road</p>
+                        <p>For precise directions, please contact us at +91 96012 88111</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 60px; text-align: center;">
+                    <h3 style="margin-bottom: 20px;">Frequently Asked Questions</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;">
+                        <div style="text-align: left;">
+                            <h4 style="margin-bottom: 10px;">What are your minimum order quantities?</h4>
+                            <p style="color: var(--text-light);">Minimum order quantities vary based on the saree type and design. Please contact our sales team for specific details.</p>
+                        </div>
+                        <div style="text-align: left;">
+                            <h4 style="margin-bottom: 10px;">Do you offer custom designs?</h4>
+                            <p style="color: var(--text-light);">Yes, we work with clients to create custom designs. Minimum order quantities apply for custom work.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Privacy Policy Page -->
+    <div id="privacy-page" class="page">
+        <section class="page-header">
+            <div class="container">
+                <h1>Privacy Policy</h1>
+                <p>Last updated: December 2023</p>
+            </div>
+        </section>
+
+        <section class="page-content">
+            <div class="container">
+                <div class="privacy-container">
+                    <div class="privacy-section">
+                        <h3>1. Introduction</h3>
+                        <p>Welcome to Siddharth Textiles. We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website or interact with us and tell you about your privacy rights and how the law protects you.</p>
+                        <p>This policy applies to all information collected through our website and any related services, sales, marketing, or events (we refer to them collectively in this privacy policy as the "Services").</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h3>2. Information We Collect</h3>
+                        <p>We collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and services, when you participate in activities on the Services, or otherwise when you contact us.</p>
+                        <p>The personal information we collect may include:</p>
+                        <ul>
+                            <li><strong>Identity Data:</strong> Includes first name, last name, username or similar identifier.</li>
+                            <li><strong>Contact Data:</strong> Includes billing address, delivery address, email address, and telephone numbers.</li>
+                            <li><strong>Business Data:</strong> Includes company name, business type, GST number, and other business-related information.</li>
+                            <li><strong>Transaction Data:</strong> Includes details about payments to and from you and other details of products and services you have purchased from us.</li>
+                            <li><strong>Technical Data:</strong> Includes internet protocol (IP) address, your login data, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform, and other technology on the devices you use to access this website.</li>
+                            <li><strong>Usage Data:</strong> Includes information about how you use our website, products, and services.</li>
+                            <li><strong>Marketing and Communications Data:</strong> Includes your preferences in receiving marketing from us and our third parties and your communication preferences.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h3>3. How We Use Your Information</h3>
+                        <p>We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances:</p>
+                        <ul>
+                            <li>Where we need to perform the contract we are about to enter into or have entered into with you.</li>
+                            <li>Where it is necessary for our legitimate interests (or those of a third party) and your interests and fundamental rights do not override those interests.</li>
+                            <li>Where we need to comply with a legal or regulatory obligation.</li>
+                        </ul>
+                        <p>Specifically, we use your information for:</p>
+                        <ul>
+                            <li>To register you as a new customer</li>
+                            <li>To process and deliver your order including managing payments, fees, and charges</li>
+                            <li>To manage our relationship with you which will include notifying you about changes to our terms or privacy policy</li>
+                            <li>To administer and protect our business and this website (including troubleshooting, data analysis, testing, system maintenance, support, reporting, and hosting of data)</li>
+                            <li>To deliver relevant website content and advertisements to you and measure or understand the effectiveness of the advertising we serve to you</li>
+                            <li>To use data analytics to improve our website, products/services, marketing, customer relationships, and experiences</li>
+                            <li>To make suggestions and recommendations to you about goods or services that may be of interest to you</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h3>4. Data Security</h3>
+                        <p>We have put in place appropriate security measures to prevent your personal data from being accidentally lost, used, or accessed in an unauthorized way, altered, or disclosed. In addition, we limit access to your personal data to those employees, agents, contractors, and other third parties who have a business need to know.</p>
+                        <p>We have put in place procedures to deal with any suspected personal data breach and will notify you and any applicable regulator of a breach where we are legally required to do so.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h3>5. Data Retention</h3>
+                        <p>We will only retain your personal data for as long as reasonably necessary to fulfill the purposes we collected it for, including for the purposes of satisfying any legal, regulatory, tax, accounting, or reporting requirements. We may retain your personal data for a longer period in the event of a complaint or if we reasonably believe there is a prospect of litigation in respect to our relationship with you.</p>
+                        <p>To determine the appropriate retention period for personal data, we consider the amount, nature, and sensitivity of the personal data, the potential risk of harm from unauthorized use or disclosure of your personal data, the purposes for which we process your personal data and whether we can achieve those purposes through other means, and the applicable legal, regulatory, tax, accounting, or other requirements.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h3>6. Your Legal Rights</h3>
+                        <p>Under certain circumstances, you have rights under data protection laws in relation to your personal data, including the right to:</p>
+                        <ul>
+                            <li><strong>Request access</strong> to your personal data</li>
+                            <li><strong>Request correction</strong> of your personal data</li>
+                            <li><strong>Request erasure</strong> of your personal data</li>
+                            <li><strong>Object to processing</strong> of your personal data</li>
+                            <li><strong>Request restriction of processing</strong> your personal data</li>
+                            <li><strong>Request transfer</strong> of your personal data</li>
+                            <li><strong>Right to withdraw consent</strong></li>
+                        </ul>
+                        <p>If you wish to exercise any of the rights set out above, please contact us using the details provided in Section 7.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h3>7. Contact Us</h3>
+                        <p>If you have any questions about this privacy policy or our privacy practices, please contact us:</p>
+                        <p><strong>Siddharth Textiles</strong><br>
+                        M-1279/1280/1281, Ground Floor<br>
+                        Surat Textile Market, Ring Road<br>
+                        Surat, Gujarat 395002<br>
+                        India<br>
+                        Phone: +91 96012 88111<br>
+                        Email: SIDDHARTHTEXTILESSURAT@gmail.com</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <h3>8. Changes to This Policy</h3>
+                        <p>We may update this privacy policy from time to time. The updated version will be indicated by an updated "Last updated" date and the updated version will be effective as soon as it is accessible. We encourage you to review this privacy policy frequently to be informed of how we are protecting your information.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <h3>Siddharth Textiles</h3>
+                    <p>Manufacturing excellence since 1995. Specializing in premium sarees for wholesale and retail markets across India.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" class="nav-link" data-page="home">Home</a></li>
+                        <li><a href="#about" class="nav-link" data-page="about">About Us</a></li>
+                        <li><a href="#contact" class="nav-link" data-page="contact">Contact</a></li>
+                        <li><a href="#privacy" class="nav-link" data-page="privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Details</h4>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>M-1279/1280/1281, Ground Floor, Surat Textile Market, Ring Road, Surat, Gujarat 395002</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        <span>+91 96012 88111</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        <span>SIDDHARTHTEXTILESSURAT@gmail.com</span>
+                    </p>
+                    <p>
+                        <i class="fas fa-clock"></i>
+                        <span>Business Hours: Mon-Sat, 10:00 AM - 8:00 PM</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Siddharth Textiles. All rights reserved. GSTIN: 24ABCDE1234F1Z5</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Page Management System
+        const pages = {
+            'home': document.getElementById('home-page'),
+            'about': document.getElementById('about-page'),
+            'contact': document.getElementById('contact-page'),
+            'privacy': document.getElementById('privacy-page')
+        };
+        
+        const navLinks = document.querySelectorAll('.nav-link');
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        // Initialize - Show home page
+        function initPage() {
+            // Hide all pages
+            Object.values(pages).forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show home page by default
+            pages['home'].classList.add('active');
+            
+            // Set active nav link
+            setActiveNav('home');
+            
+            // Update page title
+            updatePageTitle('home');
+        }
+        
+        // Set active navigation link
+        function setActiveNav(pageName) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-page') === pageName) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        // Update page title
+        function updatePageTitle(pageName) {
+            const titles = {
+                'home': 'Siddharth Textiles | Premium Saree Manufacturer Since 1995',
+                'about': 'About Us | Siddharth Textiles',
+                'contact': 'Contact Us | Siddharth Textiles',
+                'privacy': 'Privacy Policy | Siddharth Textiles'
+            };
+            
+            document.title = titles[pageName] || titles['home'];
+        }
+        
+        // Navigate to page
+        function navigateToPage(pageName) {
+            // Hide all pages
+            Object.values(pages).forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show requested page
+            if (pages[pageName]) {
+                pages[pageName].classList.add('active');
+                setActiveNav(pageName);
+                updatePageTitle(pageName);
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+                
+                // Close mobile menu if open
+                if (mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            }
+        }
+        
+        // Navigation click handlers
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const pageName = this.getAttribute('data-page');
+                navigateToPage(pageName);
+            });
+        });
+        
+        // Logo click handler
+        document.querySelector('.logo').addEventListener('click', function(e) {
+            e.preventDefault();
+            navigateToPage('home');
+        });
+        
+        // Mobile menu toggle
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Form submission handlers
+        function setupForm(formId, successMessage) {
+            const form = document.getElementById(formId);
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = new FormData(form);
+                    const formValues = {};
+                    formData.forEach((value, key) => {
+                        formValues[key] = value;
+                    });
+                    
+                    // Simulate form submission
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+                    submitBtn.disabled = true;
+                    
+                    setTimeout(() => {
+                        alert(successMessage);
+                        form.reset();
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }, 1500);
+                });
+            }
+        }
+        
+        // Initialize forms
+        document.addEventListener('DOMContentLoaded', function() {
+            initPage();
+            
+            setupForm(
+                'homeContactForm', 
+                'Thank you for your inquiry. Our team will contact you within 24 hours.'
+            );
+            
+            setupForm(
+                'contactPageForm', 
+                'Thank you for your detailed inquiry. Our sales team will contact you shortly with more information.'
+            );
+            
+            // Header scroll effect
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.style.boxShadow = 'var(--shadow-md)';
+                } else {
+                    header.style.boxShadow = 'var(--shadow-sm)';
+                }
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('nav') && !e.target.closest('.mobile-menu-btn') && mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+    </script>
+</body>
+</html>
